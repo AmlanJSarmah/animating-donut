@@ -58,13 +58,14 @@ void animate_donut(float A,float B)
       			float L = cosphi*costheta*sinB - cosA*costheta*sinphi -sinA*sintheta + cosB*(cosA*sintheta - costheta*sinA*sinphi);
       			int luminos_intensity = 8 * L;
       			int o = xp + 80 * yp;
-      			if (22 > yp && yp > 0 && xp > 0 && 79 > xp && one_over_z > z_buffer[o]) {
+      			if (22 > yp && yp > 0 && xp > 0 && 79 > xp && one_over_z > z_buffer[o]) 
+      			{
          			z_buffer[o] = one_over_z;
           			output[o] = ".,-~:;=!*#$@"[luminos_intensity > 0 ? luminos_intensity : 0];
         		}
       		}
 		}
-		printf("\x1b[H");
+		printf("\x1b[H"); //opens in new shell after clearing terminal
 		for(k=0;k<1761;k++)
 		{
 			putchar(k % 80 ? output[k] : 10);
