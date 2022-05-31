@@ -70,7 +70,7 @@ void animate_donut(float A,float B)
             A += 0.00004;
             B += 0.00002;
 		}
-		usleep(3000);
+		usleep(5000);
 	}
 }
 
