@@ -12,8 +12,6 @@ const float R2 = 2;
 const float R1 = 1;
 
 const float K2 = 5;
-//const float K1 = screen_width*K2*3/(8*(R1+R2));
-const float K1 = 150;
 
 void animate_donut(float A,float B)
 {
@@ -40,15 +38,15 @@ void animate_donut(float A,float B)
 				float cosphi = cos(phi);
 				float sinphi = sin(phi);
 
-				float h = costheta + 2; // equivalent to R2 + R1 * costheta
+				float h = costheta + R2; // equivalent to R2 + R1 * costheta here R1 is 1
 				float t = sinphi*h*cosA-sintheta*sinA;
 
 				// calculating x,y coordinate
 				float x = cosphi*h*cosB-t*sinB;
 				float y = cosphi*h*sinB+t*cosB;
 				
-				// calculate 1/z
-				float one_over_z = 1/(sinphi*h*sinA+sintheta*cosA+5);
+				// calculate 1/z + K2
+				float one_over_z = 1/(sinphi*h*sinA+sintheta*cosA+K2);
 				
 				// x and y projection.
       			int xp = (int) (40 + 30*one_over_z*x);
