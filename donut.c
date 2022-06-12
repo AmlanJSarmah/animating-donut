@@ -28,7 +28,7 @@ void animate_donut(float A,float B)
 		float sinB = sin(B);
 		//filling the buffer with values
 		memset(output,' ',1760 ); // no random characters will appear in the output now
-		memset(z_buffer,0,7040);
+		memset(z_buffer,0,1760*4);
 		for(theta=0; theta<two_pi_rad; theta+=theta_spacing)
 		{
 			float costheta = cos(theta);
