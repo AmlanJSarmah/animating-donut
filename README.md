@@ -1,6 +1,6 @@
 # Donut
 
-A donut being printed on terminal made with C.
+An animated donut being rendered on terminal made with C.
 
 ### Screenshots
 
