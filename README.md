@@ -10,4 +10,8 @@ An animated donut being rendered on terminal made with C.
 
 ### Installation
 
-Download the source code navigate to the folder where the source file "donut.c" is present and run "gcc donut.c -lm -o donut".
+Download the source code navigate to the folder where the source file "donut.c" is present and run 
+
+> gcc donut.c -lm -o donut
+
+This will create a object file that we can execute!
