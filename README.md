@@ -15,3 +15,5 @@ Download the source code navigate to the folder where the source file "donut.c" 
 > gcc donut.c -lm -o donut
 
 This will create a object file that we can execute!
+
+P.S. : The *-lm* flag links the math.h library to our file.
